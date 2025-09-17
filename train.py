@@ -28,8 +28,8 @@ def build_model() -> Pipeline:
 
 def parse_args():
     p = argparse.ArgumentParser(description="Breast cancer benign/malignant classifier")
-    p.add_argument("--test-size", type=float, default=0.20,
-                   help="Fraction held out for testing (default: 0.20)")
+    p.add_argument("--test-size", type=float, default=0.05,
+                   help="Fraction held out for testing (default: 0.05)")
     p.add_argument("--no-plot", action="store_true", help="Disable ROC plot")
     p.add_argument("--save-test-json", default="heldout_test.json",
                    help="Path to save held-out (non-training) set with predictions (JSON)")
